@@ -1,149 +1,91 @@
 # unvibeshit
 
-> Search first. Grill second. Build last.
+> **Search first. Value first. Grill hard. Build only when the value survives.**
 
-`unvibeshit` is a tiny Agent Skill for stress-testing software ideas **before** requirements, architecture, or code.
+`unvibeshit` is a small Agent Skill for deciding whether a software idea deserves to be built **before** requirements, architecture, or code.
 
-Vibe coding makes implementation cheap. It does not make bad ideas valuable — but the answer is not to become a contrarian that kills everything.
+Vibe coding makes implementation cheap. It does not make low-value ideas worth doing.
 
-The goal is **better decisions**: understand the real intent, research what already exists, reason from first principles, challenge weak assumptions, and still leave room for legitimate innovation, experimentation, learning, fun, and creative nonsense.
+The core rule is simple:
 
-## Operating style
+> **Value first. Cost second.**
 
-The skill uses an **INTJ-like reasoning style** as shorthand for being independent, systems-oriented, strategically skeptical, emotionally neutral, and willing to challenge assumptions.
+A project does not become worthwhile just because AI can generate it in an evening.
 
-That does **not** mean performative cynicism.
+## What it does
 
-- A clever **NO** is not better than a justified **YES**.
-- The success metric is decision quality, not idea kill rate.
-- First principles should be used to discover better formulations, not only to tear ideas apart.
+`unvibeshit` uses an INTJ-like, first-principles reasoning style to challenge an idea on four things:
+
+1. **Value** — what meaningful outcome does this create, for whom, and why does it matter?
+2. **Existing solutions** — what already solves the same job, and what does that imply?
+3. **Delta** — if alternatives exist, what materially improves and is that improvement actually valuable?
+4. **Opportunity cost** — is this worth the time, attention, maintenance, and alternatives it displaces?
+
+It also ignores sunk-cost reasoning and considers lifecycle cost when relevant.
 
 ## Search before inventing
 
-Before interrogating the user, `unvibeshit` performs a **Substitute Scan** when research tools are available. It looks for:
+When research tools are available, the agent searches first: commercial products, platform-native features, open source, libraries, packages, plugins, CLIs, and adjacent workflows.
 
-- existing commercial products and SaaS
-- open-source projects and GitHub repositories
-- libraries, frameworks, plugins, CLIs, and packages
-- built-in platform/vendor capabilities
-- adjacent tools solving the same job in a different way
+It surfaces the closest alternatives with links before asking the user to defend the idea.
 
-The closest alternatives should be surfaced with links and interpreted as evidence.
+**Similar is not duplicate.** Existing projects are evidence, not a veto. They may validate demand, prove the problem is already solved, reveal an underserved niche, or establish the baseline a new idea must beat.
 
-### Similar does not mean duplicate
+## Value first
 
-Existing projects are **high-signal evidence, not an automatic veto**.
+For non-entertainment projects, the agent expects a credible value case: a real recurring need, a meaningful improvement, concrete user behavior, or another strong reason the outcome matters.
 
-Competition may mean:
+**Low implementation cost is not evidence of value.** Cheap and reversible experiments only affect *how* to validate an idea after there is plausible value to validate.
 
-- the need is already validated
-- an incumbent already covers the core job well
-- a segment is underserved
-- the current workflow is too expensive, complex, locked-in, unsafe, or inconvenient
-- the capability is commoditized and should probably be reused
-- there is room for a materially better approach
-- the existing implementation is useful reference material
+### Entertainment exception
 
-`unvibeshit` uses this evidence to raise or lower the burden of proof. It does not kill an idea merely because something similar exists.
+Meme, joke, art, creative, and entertainment projects do not need business metrics. Fun, expression, novelty, social interaction, or cultural resonance can be the intended value.
 
-## Value is broader than money
-
-Not every project is a startup.
-
-Before judging an idea, the skill identifies what kind of value it is trying to create:
-
-- **Commercial / product** — adoption, willingness to pay, distribution, differentiation, defensibility
-- **Productivity / automation** — time saved, errors reduced, friction removed
-- **Infrastructure / technical** — control, performance, security, portability, interoperability
-- **Learning / research** — knowledge gained, skills developed, hypotheses tested
-- **Creative / entertainment / meme** — fun, humor, expression, novelty, virality, social interaction
-- **Personal utility / hobby** — enjoyment, convenience, customization, craftsmanship, curiosity
-
-A joke project does not need TAM. A weekend toy does not need a moat. A learning project does not need revenue.
-
-For a low-cost playful idea, **"this is fun and worth an evening" can be enough value**.
-
-For a high-cost commercial or operational commitment, the evidence burden should be much higher.
-
-Economic value is one kind of value, not the definition of value.
-
-## Decision hygiene
-
-`unvibeshit` explicitly considers:
-
-- **First principles** — separate fundamental constraints from inherited assumptions.
-- **Sunk cost** — past effort already spent is not a reason to continue spending.
-- **Opportunity cost** — compare the idea with the best realistic use of the same resources.
-- **Reversibility** — cheap experiments deserve a lower burden of proof than expensive commitments.
-- **YAGNI / Occam's razor** — do the smallest thing that achieves the intended value.
-
-## Avoiding contrarian failure modes
-
-The skill must not:
-
-- reject ideas simply because alternatives exist
-- demand commercial metrics from hobby, learning, creative, or entertainment projects
-- treat subjective value as fake value
-- over-index on moats when a project does not need one
-- confuse "not economically optimal" with "not worth doing"
-- use first principles only to deconstruct instead of finding sharper or more innovative formulations
-
-The target is **vibeshit**, not vibes.
-
-## Decision compression
-
-Deep thinking should produce a sharp decision, not a long consulting report.
-
-`unvibeshit` now follows a simple rule:
-
-> **Reason broadly. Conclude narrowly.**
-
-The final answer should default to roughly **150–250 words**, avoid repeated tradeoffs, mention no more than three alternatives unless they materially change the decision, and end with exactly five items:
-
-1. **Verdict** — `DON'T BUILD`, `USE EXISTING`, `PROTOTYPE`, or `BUILD`
-2. **Core reason** — the single strongest reason
-3. **Biggest risk** — the one factor most likely to make the decision wrong
-4. **Scope cut** — what not to build or optimize yet
-5. **Next step** — one concrete, preferably reversible action
-
-This is intentionally opinionated: the agent should not hide behind "it depends" or dilute a verdict with a page of caveats.
+The skill should judge whether they deliver that value, not whether they have TAM, ROI, or a moat.
 
 ## Verdicts
 
-- **DON'T BUILD** — unlikely to create enough intended value to justify forward and opportunity costs.
-- **USE EXISTING** — an existing option already provides the intended value well enough, and rebuilding adds too little.
-- **PROTOTYPE** — one important assumption should be tested cheaply first.
-- **BUILD** — the intended value is credible and worth the forward/opportunity cost, even if alternatives exist.
+Every evaluation ends with one verdict:
+
+- **DON'T BUILD** — the value is too weak to justify the opportunity cost.
+- **USE EXISTING** — the need is real, but an existing solution already captures the value well enough.
+- **PROTOTYPE** — potential value is credible, but one decisive assumption needs a cheap test.
+- **BUILD** — the value is clear enough and there is a meaningful reason to build rather than stop or reuse.
+
+`PROTOTYPE` is not a consolation prize for cheap ideas. If the value case is weak, the answer is still **DON'T BUILD**.
+
+## Output style
+
+Deep reasoning should end in a short decision, not a consulting report.
+
+The final answer contains only:
+
+- **Verdict**
+- **Value judgment**
+- **Existing signal**
+- **Decisive issue**
+- **Next step**
 
 ## Usage
 
-Install `SKILL.md` using the skill mechanism supported by your agent, then invoke it before starting a new project or feature.
-
 ```text
-Use unvibeshit to evaluate this idea before we write any requirements or code:
+Use unvibeshit to evaluate this idea before we write requirements or code:
 
 I want to build ...
 ```
 
 ## Philosophy
 
-- Search first. Grill second. Build last.
+- Value before feasibility.
 - Problem before solution.
 - First principles before inherited assumptions.
-- **Similar is not duplicate.**
+- Search before inventing.
+- Similar is not duplicate.
 - Existing alternatives are evidence, not verdicts.
-- Ignore sunk cost; consider opportunity cost.
-- Match rigor to stakes.
-- Subjective value can still be real value.
-- Complexity is not differentiation.
-- First-version coding cost is not lifecycle cost.
-- Skepticism should create clarity, not cynicism.
-- **Reason broadly. Conclude narrowly.**
+- Ignore sunk cost; respect opportunity cost.
+- Complexity does not create value.
+- Cheap code can still be wasted work.
+- Entertainment value is still value.
+- Reason deeply; conclude sharply.
 
-## Why the name?
-
-Vibe coding is useful when it compresses the cost of implementing an idea worth trying.
-
-When implementation starts before anyone checks the real intent, what already exists, which assumptions are false, or whether the result creates enough of the value it actually seeks, vibe coding turns into **vibeshit**.
-
-`unvibeshit` is the check before that happens.
+The target is not vibe coding. The target is **vibeshit**: implementation momentum without a value case.
