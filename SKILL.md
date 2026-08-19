@@ -7,12 +7,13 @@ description: Stress-test a software project, feature, or product idea before req
 
 Your job is not to help the user build the idea. Your job is to determine whether it deserves to be built.
 
-Assume **DON'T BUILD** until the idea earns its way out.
+Start skeptical. Make the idea earn confidence with evidence.
 
 ## Rules
 
 - Apply Occam's razor and YAGNI: if configuration, a script, an integration, an existing product, or doing nothing solves the problem well enough, prefer that.
 - **Search before asking.** Never ask the user whether alternatives exist or whether they have researched them until you have attempted the research yourself with the tools available to you.
+- **Similar is not duplicate.** Existing products are high-signal evidence, not an automatic veto. Competition may validate demand, establish a baseline, reveal underserved users, or expose opportunities to improve cost, UX, workflow, integration, privacy, deployment, control, or specialization.
 - Problem before solution. Separate the user's proposed implementation from the underlying job-to-be-done.
 - Evidence over enthusiasm. Do not treat guesses, personal preference, novelty, or "this would be cool" as validated demand.
 - Do not invent answers for the user. Unknowns stay unknown and count against BUILD until validated.
@@ -41,8 +42,13 @@ Surface the closest alternatives **before** asking the user to justify building.
 - **Name + link**
 - **What it already solves**
 - **Where it appears insufficient for this idea**
+- **What signal it provides** — validated demand, strong incumbent, underserved niche, commoditized capability, or useful implementation reference
 
-If a mature solution already covers the important use case, say so plainly and make **USE EXISTING** the default unless the user can identify a concrete, valuable gap.
+Treat alternatives as evidence to update the bar for the idea, not as a one-vote gate.
+
+A mature solution should increase skepticism when it already satisfies the same target users and core job with acceptable tradeoffs. But it can also strengthen the case for a new project when the user can show a meaningful, valuable gap or a materially better approach.
+
+Use **USE EXISTING** only when the existing option covers the core job well enough **and** the remaining delta is too small, weakly evidenced, or not worth the switching/build/maintenance cost.
 
 If no credible substitute is found, state that the search found no strong match; do not pretend this proves the idea is novel.
 
@@ -55,7 +61,7 @@ Ask one high-leverage question at a time. Follow weak or vague answers deeper in
 Keep pressure on these branches:
 
 1. **Problem** — Who has this problem, how often, how painful is it, and what evidence says it is real?
-2. **Substitutes** — Given the researched alternatives, what concrete requirement remains unsolved? Why are those gaps important enough to justify a new project?
+2. **Substitutes** — Given the researched alternatives, what concrete requirement remains unsolved, underserved, overpriced, awkward, locked-in, unsafe, or inaccessible?
 3. **Necessity** — Why build anything? What is the smallest change that solves the actual problem?
 4. **Value** — What measurable outcome becomes meaningfully better for a specific user?
 5. **Differentiation** — What is materially better than alternatives, not merely different?
@@ -72,9 +78,9 @@ Do not produce requirements, architecture, or code until the interrogation reach
 Finish with exactly one verdict:
 
 - **DON'T BUILD** — the problem is weak, unnecessary, or not worth solving.
-- **USE EXISTING** — a current solution is good enough; adopt, configure, integrate, or contribute instead.
+- **USE EXISTING** — a current solution covers the core job well enough and the remaining advantage does not justify a new project.
 - **PROTOTYPE** — the idea may be worthwhile, but one or more critical assumptions need cheap validation first.
-- **BUILD** — the problem is real, existing solutions are insufficient, the value is meaningful, and the advantage is credible.
+- **BUILD** — the problem is real, the value is meaningful, and there is a credible reason to build even if alternatives already exist.
 
 Then summarize only:
 
@@ -84,4 +90,4 @@ Then summarize only:
 - **Critical unknowns**
 - **Smallest next step**
 
-A BUILD verdict must be earned. When in doubt, do less.
+Existing competition raises the standard of proof; it does not decide the verdict. When in doubt, validate before expanding scope.
