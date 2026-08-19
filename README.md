@@ -6,7 +6,7 @@
 
 Vibe coding makes implementation cheap. It does not make bad ideas valuable — but the answer is not to become a contrarian that kills everything.
 
-The goal of `unvibeshit` is **better decisions**: understand the real intent, research what already exists, reason from first principles, challenge weak assumptions, and still leave room for legitimate innovation, experimentation, learning, fun, and creative nonsense.
+The goal is **better decisions**: understand the real intent, research what already exists, reason from first principles, challenge weak assumptions, and still leave room for legitimate innovation, experimentation, learning, fun, and creative nonsense.
 
 ## Operating style
 
@@ -42,7 +42,7 @@ Competition may mean:
 - the current workflow is too expensive, complex, locked-in, unsafe, or inconvenient
 - the capability is commoditized and should probably be reused
 - there is room for a materially better approach
-- the existing implementation is simply useful reference material
+- the existing implementation is useful reference material
 
 `unvibeshit` uses this evidence to raise or lower the burden of proof. It does not kill an idea merely because something similar exists.
 
@@ -69,35 +69,17 @@ Economic value is one kind of value, not the definition of value.
 
 ## Decision hygiene
 
-`unvibeshit` explicitly considers several reasoning traps:
+`unvibeshit` explicitly considers:
 
 - **First principles** — separate fundamental constraints from inherited assumptions.
-- **Sunk cost** — past effort already spent is not a reason to continue spending. Reusable assets that reduce future cost still count normally.
-- **Opportunity cost** — compare the idea with the best realistic use of the same time, money, attention, and maintenance capacity.
-- **Reversibility** — cheap, reversible experiments deserve a lower burden of proof than expensive, irreversible commitments.
+- **Sunk cost** — past effort already spent is not a reason to continue spending.
+- **Opportunity cost** — compare the idea with the best realistic use of the same resources.
+- **Reversibility** — cheap experiments deserve a lower burden of proof than expensive commitments.
 - **YAGNI / Occam's razor** — do the smallest thing that achieves the intended value.
-
-## What it challenges
-
-The interrogation is adaptive rather than a rigid checklist. Depending on the project, it examines:
-
-1. **Intent** — what is the project actually for?
-2. **Real need** — what outcome is wanted independent of the proposed implementation?
-3. **First principles** — which assumptions can be removed or reframed?
-4. **Substitutes** — what already exists, and what does that evidence imply?
-5. **Necessity** — what is the smallest thing worth building?
-6. **Value** — what becomes meaningfully better, more useful, more enjoyable, expressive, or informative?
-7. **Differentiation / novelty** — what is actually different or better?
-8. **Defensibility** — only when strategically relevant.
-9. **Forward cost** — what future build and maintenance burden remains?
-10. **Opportunity cost** — what better alternative competes for the same resources?
-11. **Falsifiability** — what cheap experiment could resolve the key uncertainty?
 
 ## Avoiding contrarian failure modes
 
-The skill should not become a professional naysayer.
-
-It must not:
+The skill must not:
 
 - reject ideas simply because alternatives exist
 - demand commercial metrics from hobby, learning, creative, or entertainment projects
@@ -108,14 +90,30 @@ It must not:
 
 The target is **vibeshit**, not vibes.
 
+## Decision compression
+
+Deep thinking should produce a sharp decision, not a long consulting report.
+
+`unvibeshit` now follows a simple rule:
+
+> **Reason broadly. Conclude narrowly.**
+
+The final answer should default to roughly **150–250 words**, avoid repeated tradeoffs, mention no more than three alternatives unless they materially change the decision, and end with exactly five items:
+
+1. **Verdict** — `DON'T BUILD`, `USE EXISTING`, `PROTOTYPE`, or `BUILD`
+2. **Core reason** — the single strongest reason
+3. **Biggest risk** — the one factor most likely to make the decision wrong
+4. **Scope cut** — what not to build or optimize yet
+5. **Next step** — one concrete, preferably reversible action
+
+This is intentionally opinionated: the agent should not hide behind "it depends" or dilute a verdict with a page of caveats.
+
 ## Verdicts
 
-Every interrogation ends with exactly one verdict:
-
-- **DON'T BUILD** — the project is unlikely to deliver enough of its intended value to justify its forward and opportunity costs.
-- **USE EXISTING** — a current option already provides the intended value well enough, and rebuilding adds too little.
-- **PROTOTYPE** — important assumptions should be tested cheaply first.
-- **BUILD** — the intended value is credible and worth the forward/opportunity cost, with a legitimate reason to build even if alternatives already exist.
+- **DON'T BUILD** — unlikely to create enough intended value to justify forward and opportunity costs.
+- **USE EXISTING** — an existing option already provides the intended value well enough, and rebuilding adds too little.
+- **PROTOTYPE** — one important assumption should be tested cheaply first.
+- **BUILD** — the intended value is credible and worth the forward/opportunity cost, even if alternatives exist.
 
 ## Usage
 
@@ -140,6 +138,7 @@ I want to build ...
 - Complexity is not differentiation.
 - First-version coding cost is not lifecycle cost.
 - Skepticism should create clarity, not cynicism.
+- **Reason broadly. Conclude narrowly.**
 
 ## Why the name?
 
